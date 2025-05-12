@@ -210,7 +210,7 @@ func (toa *TraefikOidcAuth) introspectToken(token string) (bool, map[string]inte
 	}
 
 	// TODO: Remove
-	//toa.logAvailableClaims(introspectResponse)
+	toa.logAvailableClaims(introspectResponse)
 
 	if introspectResponse["active"] != nil {
 		return introspectResponse["active"].(bool), introspectResponse, nil
